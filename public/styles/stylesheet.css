@@ -58,5 +58,19 @@
     padding: 8px;
   }
 
+  div#google-map-holder{
+    padding: 16px;
+    height: 500px;
+    width: 100%;
+  }
 
+
+}
+
+/*UTILITIES*/
+.removed_item {
+  display: none !important;
+}
+.added_item {
+  display: block !important;
 }

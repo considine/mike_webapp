@@ -7,32 +7,20 @@
   <link rel="stylesheet" href="styles/stylesheet.css" type="text/css">
   </head>
   <body ng-app="formApp">
-    <div id="top-form-panel-wrapper" ng-click="addTodo()">
+    <div id="top-form-panel-wrapper" ng-controller="panelCtrl">
       <div id="top-form-panel">
         <ul id="form-nav">
-          <li class="input-form nav-item selected-nav-item">LOCATION
-          </li><li class="input-form nav-item unviewed-nav-item">LEASE
-          </li><li class="input-form nav-item unviewed-nav-item">DATA
-          </li><li class="input-form nav-item unviewed-nav-item">BIDDING</li>
+        <a href="#" ng-click="setIndex($index)" ng-repeat="item in layout_info"><li class="input-form nav-item selected-nav-item">{{item.data[1].content}}</li></a>
         </ul>
       </div>
     </div>
 
 
     <div ng-controller="mainCtrl" id="section-wrapper">
-      <img class="form-section-icons" src="./img/icons/map_marker.png"> </img>
-      <section>
+      <section  ng-repeat="image in layout_info" >
+        <img ng-hide="{{image.data[2].visible}}" class="form-section-icons" ng-src="{{image.data[0].imgSrc}}"> </img>
+      </section>
 
-      </section>
-      <!-- <img class="form-section-icons" src="./img/icons/calender.png"> </img>
-      <section>
-      </section>
-      <img class="form-section-icons" src="./img/icons/home.jpeg"> </img>
-      <section>
-      </section>
-      <img class="form-section-icons" src="./img/icons/dollar_sign.png"> </img>
-      <section>
-      </section> -->
 
     </div>
 
@@ -46,12 +34,16 @@
 
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="scripts/poj/javascriptObjects.js"></script>
-  <script src="vendor/angular.js"
+  <script src="vendor/angular.js"></script>
   <script src="scripts/jquery/jquery-ui.js"></script>
   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
   <script src="scripts/app.js"></script>
+  <script src="scripts/services/selectedIndex.js"> </script>
   <script src="scripts/services/data.js"></script>
   <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/panel.js"></script>
+  <script src="scripts/maps/map_insert.js"> </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPCkkkkP7BAsionEIyZsR_z7ur3Ehr3NU&callback=initMap"></script>
 
   </body>
 </html>

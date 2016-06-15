@@ -1,3 +1,5 @@
 'use strict';
 
-var app = angular.module('formApp', []);
+//var angular = require('angular');
+
+angular.module('formApp', []);
