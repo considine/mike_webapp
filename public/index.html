@@ -3,47 +3,47 @@
   <head>
     <meta charset="UTF-8">
     <title>title</title>
-
   <link rel="stylesheet" href="styles/stylesheet.css" type="text/css">
+  <link rel="stylesheet" href="styles/animations.css" type="text/css">
   </head>
-  <body ng-app="formApp">
-    <div id="top-form-panel-wrapper" ng-controller="panelCtrl">
+  <body ng-app="formApp" ng-controller="mainCtrl">
+    <div id="top-form-panel-wrapper">
       <div id="top-form-panel">
         <ul id="form-nav">
-        <a href="#" ng-click="setIndex($index)" ng-repeat="item in layout_info"><li class="input-form nav-item selected-nav-item">{{item.data[1].content}}</li></a>
+        <li ng-repeat="item in layout_info" ng-click="run($index)" class="input-form nav-item selected-nav-item">{{item.data[1].content}} </li>
         </ul>
       </div>
     </div>
-
-
-    <div ng-controller="mainCtrl" id="section-wrapper">
-      <section  ng-repeat="image in layout_info" >
-        <img ng-hide="{{image.data[2].visible}}" class="form-section-icons" ng-src="{{image.data[0].imgSrc}}"> </img>
-      </section>
-
-
-    </div>
-
+    <div id="section-wrapper">
+      <img ng-src="{{currentDisplayImage}}" class="form-section-icons removed_item left-clear">
+      <div id="form-section-wrapper">
+        <div  id="form-data-holder">
+         <!--  <img ng-class="{'removed_item': $index!=landingOption}" class="form-section-icons" ng-src="{{image.data[0].imgSrc}}"> </img> -->
+         <!-- FORM DATA -->
+         <new-listing-form-location> </new-listing-form-location>
+         
+        </div> <!--End image wrapper -->
+      </div> <!--End form-secion wrapper -->
+       
+    </div> <!-- End section wrapper-->
     <div id="google-map-holder">
       <img src="./img/indicator.gif"></img>
     </div>
 
 
-
-
-
+    <!-- Use Jetpack to bundle these scripts!!! -->
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="scripts/poj/javascriptObjects.js"></script>
   <script src="vendor/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
   <script src="scripts/jquery/jquery-ui.js"></script>
   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+  <script src="scripts/jquery/datepicker.js"> </script>
   <script src="scripts/app.js"></script>
-  <script src="scripts/services/selectedIndex.js"> </script>
   <script src="scripts/services/data.js"></script>
   <script src="scripts/controllers/main.js"></script>
-  <script src="scripts/controllers/panel.js"></script>
+  <script src="scripts/directives/formtemplates.js"></script>
   <script src="scripts/maps/map_insert.js"> </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPCkkkkP7BAsionEIyZsR_z7ur3Ehr3NU&callback=initMap"></script>
-
   </body>
 </html>

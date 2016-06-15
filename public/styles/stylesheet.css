@@ -16,7 +16,7 @@
     margin-left: auto;
     border-radius: 12px;
     overflow:hidden;
-    background-color: #f3f3f3;
+
     margin-right: auto;
     display: inline-block;
   }
@@ -34,6 +34,8 @@
       display: inline-block;
       padding: 10px;
       font-size: 24px;
+      background-size: 10%;
+      cursor: pointer;
   }
 
   li.unviewed-nav-item {
@@ -49,19 +51,54 @@
 
   div#section-wrapper {
     padding: 24px;
+    overflow: hidden;
+  }
+  div#form-section-wrapper {
+    overflow: hidden;
+    margin-right: 48px; /*TODO use SASS to automate this*/
+    background-color: gray;
   }
 
   img.form-section-icons {
     height: 48px;
     width: 48px;
-    display: block;
+    /*display: inline-block;*/
+    float: left;
+    vertical-align: top;
     padding: 8px;
+  }
+  img.form-section-icons.left-clear {
+    float: left;
+  }
+  img.form-section-icons.right-clear {
+    overflow: hidden;
+    float: right;
+  }
+
+  div#form-data-holder {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 50%;
+  }
+
+  /*Date picker*/
+  #ui-datepicker-div  {
+    background-color: white;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+  }
+  #ui-datepicker-div a {
+    text-decoration: none;
   }
 
   div#google-map-holder{
-    padding: 16px;
+    padding: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
     height: 500px;
-    width: 100%;
+    width: 90%;
   }
 
 
@@ -69,8 +106,15 @@
 
 /*UTILITIES*/
 .removed_item {
-  display: none !important;
+  /*transition: 2s myChange;*/
+  animation-name: example;
+  animation-duration: .5s;
+ 
+  
 }
 .added_item {
   display: block !important;
 }
+
+
+

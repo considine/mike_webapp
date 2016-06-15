@@ -1,21 +1,20 @@
 'use strict';
 
 angular.module('formApp')
-.controller('mainCtrl', function($scope, dataService, messages){
+.controller('mainCtrl', function($scope, dataService){
   //TODO make this be dependent of where they were last
-  $scope.newIndexCallback = function (response) {
-    console.log($scope.layout_info[response].data[2].visible +  " is rain");
-    $setTimeout(function () {
-      ($scope.layout_info[response].data[2].visible = !$scope.layout_info[response].data[2].visible);
-    }, 10);
-  }
+  
 
   $scope.landingOption = 1;
-  $scope.testBool = true;
-  messages.add($scope.landingOption, $scope.newIndexCallback);
+  $scope.currentDisplayImage = "img/icons/transparent.png"
   dataService.getLayoutInfo(function(response) {
     $scope.layout_info = response.data;
 
   })
+
+  $scope.run = function (index) {
+    $scope.landingOption = index;
+    $scope.currentDisplayImage = $scope.layout_info[index].data[0].imgSrc;
+  }
 
 })
