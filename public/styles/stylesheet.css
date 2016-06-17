@@ -3,7 +3,7 @@
 @media (min-width:1025px) {
   h3, label, li, input	{
 
-      font-family: Helvetica, Arial, Sans-Serif;
+      font-family: "Helvetica Neue", Arial, Sans-Serif;
   	/*display: none;*/
   }
 
@@ -85,11 +85,22 @@
   /*Date picker*/
   #ui-datepicker-div  {
     background-color: white;
-    font-family: Helvetica, Arial, Sans-Serif;
+    font-family: "Helvetica Neue", Arial, Sans-Serif;
     text-decoration: none;
   }
   #ui-datepicker-div a {
     text-decoration: none;
+  }
+
+  /*form*/
+  .datepicker {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+
+  label.date-picker-label {
+
+    font-size: 16px;
   }
 
   div#google-map-holder{
@@ -109,12 +120,9 @@
   /*transition: 2s myChange;*/
   animation-name: example;
   animation-duration: .5s;
- 
-  
+
+
 }
 .added_item {
   display: block !important;
 }
-
-
-
