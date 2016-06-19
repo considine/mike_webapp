@@ -15,7 +15,8 @@ function MainCtrl($scope, dataService, addressService){
     //now start google maps function!!!
     var lat = response.data.results[0].geometry.location.lat;
     var lon = response.data.results[0].geometry.location.lng;
-  //  addMarker(lat, lon);
+    findAddress(lat, lon);
+
   })
 
   $scope.run = function (index) {
