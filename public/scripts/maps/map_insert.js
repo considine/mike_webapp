@@ -6,3 +6,13 @@ function initMap() {
     zoom: 8
   });
 }
+
+function addMarker(lat, lng) {
+
+  location = {lat, lng};
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+  markers.push(marker);
+}

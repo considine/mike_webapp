@@ -3,9 +3,14 @@ var webpack = require('webpack'),
 
 module.exports = {
     context: __dirname + '/app',
+    resolve: {
+        alias: {
+            jquery: "./jquery-1.11.3.min.js"
+        }
+    },
     entry: {
         app: './app.js',
-        vendor: ['angular']  
+        vendor: ['angular']
     },
     output: {
         path: __dirname + '/public/scripts',
