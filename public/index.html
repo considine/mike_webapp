@@ -9,8 +9,8 @@
   <body ng-app="formApp" ng-controller="mainCtrl">
     <div id="top-form-panel-wrapper">
       <div id="top-form-panel">
-        <ul id="form-nav">
-        <li ng-repeat="item in layout_info" ng-click="run($index)" class="input-form nav-item selected-nav-item">{{item.data[1].content}} </li>
+        <ul id="form-nav" ng-cloak>
+        <li ng-repeat="item in layout_info" ng-click="run($index)" class="input-form nav-item selected-nav-item"  ng-cloak>{{item.data[1].content}} </li>
         </ul>
       </div>
     </div>
@@ -20,8 +20,12 @@
         <div  id="form-data-holder">
          <!--  <img ng-class="{'removed_item': $index!=landingOption}" class="form-section-icons" ng-src="{{image.data[0].imgSrc}}"> </img> -->
          <!-- FORM DATA -->
-         <new-listing-form-location> </new-listing-form-location>
-         <new-listing-soonest-move> </new-listing-soonest-move>
+         <div ng-hide="true">
+           <new-listing-form-location> </new-listing-form-location>
+           <new-listing-soonest-move> </new-listing-soonest-move>
+        </div>
+        <label for="address-label" ng-click="fetchMap($scope.input)" ng-cloak> {{$scope.input}} </label>
+        <input type="text" id="address-label" ng-model="$scope.input">
 
         </div> <!--End image wrapper -->
       </div> <!--End form-secion wrapper -->

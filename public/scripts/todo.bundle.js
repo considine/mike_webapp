@@ -49,9 +49,15 @@ webpackJsonp([0],[
 	'use strict';
 
 	function getAddress($http) {
-	  this.getAddress = function (callback) {
+	  this.getAddress = function ( address, callback) {
 	    //todo fix this later
-	    $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=2401+Troost+Avenue,+Kansas+City,+MO&key=AIzaSyDPCkkkkP7BAsionEIyZsR_z7ur3Ehr3NU')
+	    var urlStart = "https://maps.googleapis.com/maps/api/geocode/json?address=";
+	    var urlMiddle = address;
+	    var urlEnd = "&key=AIzaSyDPCkkkkP7BAsionEIyZsR_z7ur3Ehr3NU";
+
+	    var url = urlStart + urlMiddle + urlEnd;
+	    var sample = 'https://maps.googleapis.com/maps/api/geocode/json?address=2401+Troost+Avenue,+Kansas+City,+MO&key=AIzaSyDPCkkkkP7BAsionEIyZsR_z7ur3Ehr3NU';
+	    $http.get(url)
 	    .then(callback)
 	  };
 	}
@@ -156,19 +162,23 @@ webpackJsonp([0],[
 	    $scope.layout_info = response.data;
 
 	  })
+	  $scope.fetchMap = function (input) {
+	    var address = input.replace(/ /g,"+");
+	    addressService.getAddress(address, function (response) {
+	      //now start google maps function!!!
+	      var lat = response.data.results[0].geometry.location.lat;
+	      var lon = response.data.results[0].geometry.location.lng;
+	      findAddress(lat, lon);
 
-	  addressService.getAddress(function (response) {
-	    //now start google maps function!!!
-	    var lat = response.data.results[0].geometry.location.lat;
-	    var lon = response.data.results[0].geometry.location.lng;
-	    findAddress(lat, lon);
-
-	  })
-
+	    })
+	  }
+	  //GETS EVERYTHING SET UP
 	  $scope.run = function (index) {
 	    $scope.landingOption = index;
 	    $scope.currentDisplayImage = $scope.layout_info[index].data[0].imgSrc;
 	  }
+
+
 
 	}
 

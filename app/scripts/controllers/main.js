@@ -10,19 +10,23 @@ function MainCtrl($scope, dataService, addressService){
     $scope.layout_info = response.data;
 
   })
+  $scope.fetchMap = function (input) {
+    var address = input.replace(/ /g,"+");
+    addressService.getAddress(address, function (response) {
+      //now start google maps function!!!
+      var lat = response.data.results[0].geometry.location.lat;
+      var lon = response.data.results[0].geometry.location.lng;
+      findAddress(lat, lon);
 
-  addressService.getAddress(function (response) {
-    //now start google maps function!!!
-    var lat = response.data.results[0].geometry.location.lat;
-    var lon = response.data.results[0].geometry.location.lng;
-    findAddress(lat, lon);
-
-  })
-
+    })
+  }
+  //GETS EVERYTHING SET UP
   $scope.run = function (index) {
     $scope.landingOption = index;
     $scope.currentDisplayImage = $scope.layout_info[index].data[0].imgSrc;
   }
+
+
 
 }
 

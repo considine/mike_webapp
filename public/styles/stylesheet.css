@@ -126,3 +126,9 @@
 .added_item {
   display: block !important;
 }
+
+
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
