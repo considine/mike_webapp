@@ -5,8 +5,10 @@
     <title>title</title>
   <link rel="stylesheet" href="styles/stylesheet.css" type="text/css">
   <link rel="stylesheet" href="styles/animations.css" type="text/css">
-  </head>
-  <body ng-app="formApp" ng-controller="mainCtrl">
+
+  </head><body ng-app="formApp" ng-controller="mainCtrl">
+
+    <site-header> </site-header>
     <div id="top-form-panel-wrapper">
       <div id="top-form-panel">
         <ul id="form-nav" ng-cloak>
@@ -18,7 +20,6 @@
       <img ng-src="{{currentDisplayImage}}" class="form-section-icons removed_item left-clear">
       <div id="form-section-wrapper">
         <div  id="form-data-holder">
-         <!--  <img ng-class="{'removed_item': $index!=landingOption}" class="form-section-icons" ng-src="{{image.data[0].imgSrc}}"> </img> -->
          <!-- FORM DATA -->
          <div ng-hide="true">
            <new-listing-form-location> </new-listing-form-location>
@@ -26,18 +27,12 @@
         </div>
         <label for="address-label" ng-click="fetchMap($scope.input)" ng-cloak> {{$scope.input}} </label>
         <input type="text" id="address-label" ng-model="$scope.input">
-
         </div> <!--End image wrapper -->
       </div> <!--End form-secion wrapper -->
-
     </div> <!-- End section wrapper-->
     <div id="google-map-holder">
       <img src="./img/indicator.gif"></img>
     </div>
-
-
-
-
   <script src="scripts/vendor.bundle.js"></script>
   <script src="scripts/todo.bundle.js"></script>
 

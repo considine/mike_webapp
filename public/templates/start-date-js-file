@@ -1,0 +1,4 @@
+<label class="date-label" id="start-date-label" for="datepicker-start"> START</label>
+       <input id="datepicker-start" type="text" name="start-date">
+       <label class="date-label" id="end-date-label" for="datepicker-end"> END</label>
+ <input id="datepicker-end" type="text" name="start-date">

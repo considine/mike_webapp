@@ -6,6 +6,17 @@
       font-family: "Helvetica Neue", Arial, Sans-Serif;
   	/*display: none;*/
   }
+  body, p{
+    margin: 0;
+  }
+  div#top-header-bar {
+    width: 100%;
+    display: block;
+    height: 48px;
+    background-color: black;
+    margin-bottom: 16px;
+
+  }
 
   div#top-form-panel-wrapper {
     display: block;
@@ -41,10 +52,12 @@
   li.unviewed-nav-item {
 
     color: #929292;
+    color: gray;
   }
   li.selected-nav-item {
+    background-color: lightgray;
 
-    background-color: #b7dbff;
+    /*background-color: #b7dbff;*/
   }
 
 

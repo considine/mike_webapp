@@ -9,7 +9,7 @@ webpackJsonp([0],[
 
 	__webpack_require__(3);
 	__webpack_require__(6);
-	__webpack_require__(9);
+	__webpack_require__(10);
 
 
 /***/ },
@@ -72,14 +72,34 @@ webpackJsonp([0],[
 	"use strict";
 
 	var angular = __webpack_require__(1);
-
-
-	angular.module('formApp').directive('newListingFormLocation', __webpack_require__(7));
-	angular.module('formApp').directive('newListingSoonestMove', __webpack_require__(8));
+	//TODO increase this scope
+	angular.module('formApp').directive('siteHeader', __webpack_require__(7));
+	angular.module('formApp').directive('newListingFormLocation', __webpack_require__(8));
+	angular.module('formApp').directive('newListingSoonestMove', __webpack_require__(9));
 
 
 /***/ },
 /* 7 */
+/***/ function(module, exports) {
+
+	// <div id="top-header-bar">
+	//
+	// </div>
+
+	function setTopBar () {
+	  return {
+	    templateUrl: 'templates/topbar.html',
+	    //template: '<div id="top-header-bar"></div>',
+	    replace: true,
+	    controller: 'mainCtrl'
+	  };
+	}
+
+	module.exports = setTopBar;
+
+
+/***/ },
+/* 8 */
 /***/ function(module, exports) {
 
 	// Some templates used
@@ -122,10 +142,11 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	function soonestMove () {
+	  //TODO pt
 	  var htmlString = '<div style="display: inline-block">';
 	  htmlString = htmlString + '<label for="soonest-move-date" class="date-picker-label"> SOONEST START DATE </label> <br /><input type="text" id="soones-move-date" class="datepicker">';
 	  //line break between them
@@ -140,14 +161,14 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	angular.module('formApp').controller('mainCtrl', __webpack_require__(10));
+	angular.module('formApp').controller('mainCtrl', __webpack_require__(11));
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 	'use strict';
