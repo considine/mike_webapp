@@ -11,8 +11,10 @@ h3, label, li, input	{
 #text-logo-top {
   color: white;
   font-size: 32px;
+  margin: 0;
   margin-left: 8px;
   line-height: 48px;
+
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -49,8 +51,6 @@ h3, label, li, input	{
       padding: 0px;
       margin: 0px;
       list-style-type: none;
-
-
   }
 
   li.input-form.nav-item {
@@ -66,6 +66,7 @@ h3, label, li, input	{
 
     color: #929292;
     color: white;
+    cursor: default !important; 
   }
   li.selected-nav-item {
     background-color: lightgray;
