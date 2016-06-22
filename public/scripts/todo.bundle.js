@@ -177,7 +177,7 @@ webpackJsonp([0],[
 	  //TODO make this be dependent of where they were last
 
 
-	  $scope.landingOption = 1;
+	  $scope.landingOption = 0;
 	  $scope.currentDisplayImage = "img/icons/transparent.png"
 	  dataService.getLayoutInfo(function(response) {
 	    $scope.layout_info = response.data;
@@ -190,6 +190,7 @@ webpackJsonp([0],[
 	      var lat = response.data.results[0].geometry.location.lat;
 	      var lon = response.data.results[0].geometry.location.lng;
 	      findAddress(lat, lon);
+	      console.log("The landing option is " + landingOption);
 
 	    })
 	  }

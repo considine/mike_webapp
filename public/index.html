@@ -12,7 +12,7 @@
     <div id="top-form-panel-wrapper">
       <div id="top-form-panel">
         <ul id="form-nav" ng-cloak>
-        <li ng-repeat="item in layout_info" ng-click="run($index)" class="input-form nav-item selected-nav-item"  ng-cloak>{{item.data[1].content}} </li>
+        <li ng-repeat="item in layout_info" ng-click="run($index)" class="input-form nav-item selected-nav-item" ng-class="{'unviewed-nav-item': landingOption<$index}" ng-cloak>{{item.data[1].content}}  </li>
         </ul>
       </div>
     </div>

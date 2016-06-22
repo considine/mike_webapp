@@ -1,11 +1,24 @@
 
 
-@media (min-width:1025px) {
-  h3, label, li, input	{
 
-      font-family: "Helvetica Neue", Arial, Sans-Serif;
-  	/*display: none;*/
-  }
+
+h3, label, li, input	{
+
+    font-family: "Helvetica Neue", Arial, Sans-Serif;
+  /*display: none;*/
+}
+
+#text-logo-top {
+  color: white;
+  font-size: 32px;
+  margin-left: 8px;
+  line-height: 48px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+
+@media (min-width:1025px) {
+
   body, p{
     margin: 0;
   }
@@ -52,7 +65,7 @@
   li.unviewed-nav-item {
 
     color: #929292;
-    color: gray;
+    color: white;
   }
   li.selected-nav-item {
     background-color: lightgray;
