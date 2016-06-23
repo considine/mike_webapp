@@ -1,94 +1,91 @@
-/* line 5, ../../app/sass/stylesheet.scss */
-h3, label, li, input {
-  font-family: "Helvetica Neue", Arial, Sans-Serif;
+
+
+
+
+h3, label, li, input	{
+
+    font-family: "Helvetica Neue", Arial, Sans-Serif;
   /*display: none;*/
 }
 
-/* line 11, ../../app/sass/stylesheet.scss */
 #text-logo-top {
   color: white;
   font-size: 32px;
   margin: 0;
   margin-left: 8px;
   line-height: 48px;
+
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-@media (min-width: 1025px) {
-  /* line 24, ../../app/sass/stylesheet.scss */
-  body, p {
+
+@media (min-width:1025px) {
+
+  body, p{
     margin: 0;
   }
-
-  /* line 27, ../../app/sass/stylesheet.scss */
   div#top-header-bar {
     width: 100%;
     display: block;
     height: 48px;
     background-color: black;
     margin-bottom: 16px;
+
   }
 
-  /* line 36, ../../app/sass/stylesheet.scss */
   div#top-form-panel-wrapper {
     display: block;
-    text-align: center;
+     text-align: center;
   }
 
-  /* line 41, ../../app/sass/stylesheet.scss */
   div#top-form-panel {
     margin-left: auto;
     border-radius: 12px;
-    overflow: hidden;
+    overflow:hidden;
+
     margin-right: auto;
     display: inline-block;
   }
 
-  /* line 50, ../../app/sass/stylesheet.scss */
-  ul#form-nav {
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
+  ul#form-nav  {
+      padding: 0px;
+      margin: 0px;
+      list-style-type: none;
   }
 
-  /* line 56, ../../app/sass/stylesheet.scss */
   li.input-form.nav-item {
-    margin: 0px;
-    display: inline-block;
-    padding: 10px;
-    font-size: 24px;
-    background-size: 10%;
-    cursor: pointer;
+      margin: 0px;
+      display: inline-block;
+      padding: 10px;
+      font-size: 24px;
+      background-size: 10%;
+      cursor: pointer;
   }
 
-  /* line 65, ../../app/sass/stylesheet.scss */
   li.unviewed-nav-item {
+
     color: #929292;
     color: white;
     cursor: default !important;
   }
-
-  /* line 71, ../../app/sass/stylesheet.scss */
   li.selected-nav-item {
     background-color: lightgray;
+
     /*background-color: #b7dbff;*/
   }
 
-  /* line 79, ../../app/sass/stylesheet.scss */
+
+
   div#section-wrapper {
     padding: 24px;
     overflow: hidden;
   }
-
-  /* line 83, ../../app/sass/stylesheet.scss */
   div#form-section-wrapper {
     overflow: hidden;
-    margin-right: 48px;
-    /*TODO use SASS to automate this*/
+    margin-right: 48px; /*TODO use SASS to automate this*/
     background-color: gray;
   }
 
-  /* line 89, ../../app/sass/stylesheet.scss */
   img.form-section-icons {
     height: 48px;
     width: 48px;
@@ -97,19 +94,14 @@ h3, label, li, input {
     vertical-align: top;
     padding: 8px;
   }
-
-  /* line 97, ../../app/sass/stylesheet.scss */
   img.form-section-icons.left-clear {
     float: left;
   }
-
-  /* line 100, ../../app/sass/stylesheet.scss */
   img.form-section-icons.right-clear {
     overflow: hidden;
     float: right;
   }
 
-  /* line 105, ../../app/sass/stylesheet.scss */
   div#form-data-holder {
     margin-right: auto;
     margin-left: auto;
@@ -118,32 +110,27 @@ h3, label, li, input {
   }
 
   /*Date picker*/
-  /* line 113, ../../app/sass/stylesheet.scss */
-  #ui-datepicker-div {
+  #ui-datepicker-div  {
     background-color: white;
     font-family: "Helvetica Neue", Arial, Sans-Serif;
     text-decoration: none;
   }
-
-  /* line 118, ../../app/sass/stylesheet.scss */
   #ui-datepicker-div a {
     text-decoration: none;
   }
 
   /*form*/
-  /* line 123, ../../app/sass/stylesheet.scss */
   .datepicker {
     margin-bottom: 16px;
     font-size: 16px;
   }
 
-  /* line 128, ../../app/sass/stylesheet.scss */
   label.date-picker-label {
+
     font-size: 16px;
   }
 
-  /* line 133, ../../app/sass/stylesheet.scss */
-  div#google-map-holder {
+  div#google-map-holder{
     padding: 24px;
     margin-right: auto;
     margin-left: auto;
@@ -151,21 +138,24 @@ h3, label, li, input {
     height: 500px;
     width: 90%;
   }
+
+
 }
+
 /*UTILITIES*/
-/* line 146, ../../app/sass/stylesheet.scss */
 .removed_item {
   /*transition: 2s myChange;*/
   animation-name: example;
   animation-duration: .5s;
-}
 
-/* line 153, ../../app/sass/stylesheet.scss */
+
+}
 .added_item {
   display: block !important;
 }
 
-/* line 159, ../../app/sass/stylesheet.scss */
+
+
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }
