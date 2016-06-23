@@ -12,10 +12,10 @@ var markers = [
 
 
 markers.forEach(function (marker, index) {
-  console.log("hello");
+  
   Marker.find({'name': marker}, function(err, markers) {
     if (!err && !markers.length) {
-      console.log("hello");
+
       Marker.create({name: marker});
     };
   });

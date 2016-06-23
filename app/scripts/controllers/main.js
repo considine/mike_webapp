@@ -1,11 +1,15 @@
 'use strict';
 
-function MainCtrl($scope, dataService, addressService){
+function MainCtrl($scope, dataService, addressService, propertyService){
   //TODO make this be dependent of where they were last
+
 
 
   $scope.landingOption = 0;
   $scope.currentDisplayImage = "img/icons/transparent.png"
+
+  propertyService.getPropertyData();
+
   dataService.getLayoutInfo(function(response) {
     $scope.layout_info = response.data;
 

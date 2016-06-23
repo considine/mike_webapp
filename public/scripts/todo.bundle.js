@@ -8,8 +8,8 @@ webpackJsonp([0],[
 	angular.module('formApp', []);
 
 	__webpack_require__(3);
-	__webpack_require__(6);
-	__webpack_require__(10);
+	__webpack_require__(7);
+	__webpack_require__(11);
 
 
 /***/ },
@@ -23,7 +23,8 @@ webpackJsonp([0],[
 
 
 	angular.module('formApp').service('dataService', __webpack_require__(4));
-	angular.module('formApp').service('addressService', __webpack_require__(5)); 
+	angular.module('formApp').service('addressService', __webpack_require__(5));
+	angular.module('formApp').service('propertyService', __webpack_require__(6));
 
 
 /***/ },
@@ -67,19 +68,37 @@ webpackJsonp([0],[
 
 /***/ },
 /* 6 */
+/***/ function(module, exports) {
+
+	"use strict"
+
+	//this class is a controller for getting property data.
+
+
+	function getProperty() {
+	  this.getPropertyData = function ($q) {
+	    console.log("you called the getProperty service!");
+	  }
+	}
+
+	module.exports = getProperty;
+
+
+/***/ },
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var angular = __webpack_require__(1);
 	//TODO increase this scope
-	angular.module('formApp').directive('siteHeader', __webpack_require__(7));
-	angular.module('formApp').directive('newListingFormLocation', __webpack_require__(8));
-	angular.module('formApp').directive('newListingSoonestMove', __webpack_require__(9));
+	angular.module('formApp').directive('siteHeader', __webpack_require__(8));
+	angular.module('formApp').directive('newListingFormLocation', __webpack_require__(9));
+	angular.module('formApp').directive('newListingSoonestMove', __webpack_require__(10));
 
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports) {
 
 	// <div id="top-header-bar">
@@ -99,7 +118,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	// Some templates used
@@ -142,7 +161,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	function soonestMove () {
@@ -161,24 +180,28 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	angular.module('formApp').controller('mainCtrl', __webpack_require__(11));
+	angular.module('formApp').controller('mainCtrl', __webpack_require__(12));
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	'use strict';
 
-	function MainCtrl($scope, dataService, addressService){
+	function MainCtrl($scope, dataService, addressService, propertyService){
 	  //TODO make this be dependent of where they were last
+
 
 
 	  $scope.landingOption = 0;
 	  $scope.currentDisplayImage = "img/icons/transparent.png"
+
+	  propertyService.getPropertyData();
+
 	  dataService.getLayoutInfo(function(response) {
 	    $scope.layout_info = response.data;
 
