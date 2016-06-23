@@ -1,0 +1,12 @@
+/* line 3, ../../app/sass/test.scss */
+div {
+  -moz-transform: translateX(100px) rotate(45deg);
+  -ms-transform: translateX(100px) rotate(45deg);
+  -webkit-transform: translateX(100px) rotate(45deg);
+  transform: translateX(100px) rotate(45deg);
+  -moz-transition: -moz-transform 2s ease-out 1s;
+  -o-transition: -o-transform 2s ease-out 1s;
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -webkit-transition-delay: 1s;
+  transition: transform 2s ease-out 1s;
+}
