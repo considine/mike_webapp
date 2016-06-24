@@ -2,13 +2,25 @@
 
 @import '_variables.scss';
 @import "compass/css3";
-
+@import "compass/utilities";
 h3, label, li, input	{
 
     font-family: "Helvetica Neue", Arial, Sans-Serif;
   /*display: none;*/
 }
+//todo remove
+li.input-form.nav-item {
+    margin: 0px;
+    // display: inline-block;
 
+    // padding: 10px;
+    font-size: 24px;
+    background-size: 10%;
+    cursor: pointer;
+}
+ul {
+  @include horizontal-list(10px, left);
+}
 #text-logo-top {
   color: white;
   font-size: 32px;
@@ -26,6 +38,7 @@ h3, label, li, input	{
     margin: 0;
   }
   body {
+    height: 100%;
     @include background(linear-gradient($top-gradient, $white));
     // background-color: $background;
   }
@@ -60,7 +73,7 @@ h3, label, li, input	{
 
   li.input-form.nav-item {
       margin: 0px;
-      display: inline-block;
+      // display: inline-block;
       padding: 10px;
       font-size: 24px;
       background-size: 10%;
@@ -74,7 +87,7 @@ h3, label, li, input	{
     cursor: default !important;
   }
   li.selected-nav-item {
-    background-color: lightgray;
+    background-color: white;
 
     /*background-color: #b7dbff;*/
   }
@@ -107,8 +120,10 @@ h3, label, li, input	{
 
   }
   .animate {
-    @include rotate(-180deg);
-    
+    // @include rotate(-180deg);
+    @include transform(translateX(100px), rotateX(45deg));
+    @include single-transition(transform, .5s, ease-out, 0s);
+
   }
   img.form-section-icons.left-clear {
     float: left;
@@ -151,8 +166,8 @@ h3, label, li, input	{
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
-    height: 500px;
-    width: 90%;
+    height: $google-map-height;
+    width: $google-map-width;
   }
 
 

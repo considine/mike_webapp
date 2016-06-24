@@ -1,3 +1,5 @@
+
+//COLORS
 $black : #000000;
 $white : #FFF;
 
@@ -7,7 +9,9 @@ $background: lighten($black, 95%);
 $section-bar : lighten($black, 60%);
 $top-gradient : lighten($black, 50%);
 
-
+//DIMENSIONS
 $form-left-right-margins : 50px;
 $form-icon-margin: 2px;
 $form-icon: $form-left-right-margins - $form-icon-margin;
+$google-map-height: 400px;
+$google-map-width: $google-map-height;

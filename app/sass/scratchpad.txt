@@ -11,3 +11,8 @@
   }
 
 }
+
+sticky footer:
+@include sticky-footer(120px, '#root', '#root_footer', '#footer');
+root = main div
+root_footer = div above footer
