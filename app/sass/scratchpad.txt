@@ -1,0 +1,13 @@
+@include transform(translateX(100px) rotate(45deg));
+@include transform(translateX(100px), rotate(45deg));
+ @include single-transition(transform, .6s, ease-out, 1s);
+
+
+//columns if the viewport is less than 769px:
+
+.main-content {
+  @media (min-width: 769px) {
+    @include column-count(3);
+  }
+
+}

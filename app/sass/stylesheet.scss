@@ -1,6 +1,7 @@
 
 
-
+@import '_variables.scss';
+@import "compass/css3";
 
 h3, label, li, input	{
 
@@ -24,11 +25,15 @@ h3, label, li, input	{
   body, p{
     margin: 0;
   }
+  body {
+    @include background(linear-gradient($top-gradient, $white));
+    // background-color: $background;
+  }
   div#top-header-bar {
     width: 100%;
     display: block;
     height: 48px;
-    background-color: black;
+    background-color: $top-bar;
     margin-bottom: 16px;
 
   }
@@ -93,6 +98,11 @@ h3, label, li, input	{
     float: left;
     vertical-align: top;
     padding: 8px;
+
+    &:hover {
+      @include rotate(-24deg);
+      @include single-transition(rotate, 2s, ease-out, 1s);
+    }
   }
   img.form-section-icons.left-clear {
     float: left;
