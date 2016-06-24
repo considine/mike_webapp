@@ -16,3 +16,11 @@ sticky footer:
 @include sticky-footer(120px, '#root', '#root_footer', '#footer');
 root = main div
 root_footer = div above footer
+
+
+multi column:
+@media (min-width: 769px) {
+@include column-count(3)
+@include column-gap(3em)
+@include column-rule(1px solid #ccc)
+} //borderes or rules
