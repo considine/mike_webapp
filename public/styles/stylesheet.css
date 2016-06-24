@@ -106,31 +106,27 @@ h3, label, li, input {
     vertical-align: top;
     padding: 8px;
   }
-  /* line 102, ../../app/sass/stylesheet.scss */
-  img.form-section-icons:hover {
-    -moz-transform: rotate(-24deg);
-    -ms-transform: rotate(-24deg);
-    -webkit-transform: rotate(-24deg);
-    transform: rotate(-24deg);
-    -moz-transition: rotate 2s ease-out 1s;
-    -o-transition: rotate 2s ease-out 1s;
-    -webkit-transition: rotate 2s ease-out;
-    -webkit-transition-delay: 1s;
-    transition: rotate 2s ease-out 1s;
+  /* line 106, ../../app/sass/stylesheet.scss */
+  img.form-section-icons .animate {
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    background-color: #000000 !important;
   }
 
-  /* line 107, ../../app/sass/stylesheet.scss */
+  /* line 112, ../../app/sass/stylesheet.scss */
   img.form-section-icons.left-clear {
     float: left;
   }
 
-  /* line 110, ../../app/sass/stylesheet.scss */
+  /* line 115, ../../app/sass/stylesheet.scss */
   img.form-section-icons.right-clear {
     overflow: hidden;
     float: right;
   }
 
-  /* line 115, ../../app/sass/stylesheet.scss */
+  /* line 120, ../../app/sass/stylesheet.scss */
   div#form-data-holder {
     margin-right: auto;
     margin-left: auto;
@@ -139,31 +135,31 @@ h3, label, li, input {
   }
 
   /*Date picker*/
-  /* line 123, ../../app/sass/stylesheet.scss */
+  /* line 128, ../../app/sass/stylesheet.scss */
   #ui-datepicker-div {
     background-color: white;
     font-family: "Helvetica Neue", Arial, Sans-Serif;
     text-decoration: none;
   }
 
-  /* line 128, ../../app/sass/stylesheet.scss */
+  /* line 133, ../../app/sass/stylesheet.scss */
   #ui-datepicker-div a {
     text-decoration: none;
   }
 
   /*form*/
-  /* line 133, ../../app/sass/stylesheet.scss */
+  /* line 138, ../../app/sass/stylesheet.scss */
   .datepicker {
     margin-bottom: 16px;
     font-size: 16px;
   }
 
-  /* line 138, ../../app/sass/stylesheet.scss */
+  /* line 143, ../../app/sass/stylesheet.scss */
   label.date-picker-label {
     font-size: 16px;
   }
 
-  /* line 143, ../../app/sass/stylesheet.scss */
+  /* line 148, ../../app/sass/stylesheet.scss */
   div#google-map-holder {
     padding: 24px;
     margin-right: auto;
@@ -174,19 +170,19 @@ h3, label, li, input {
   }
 }
 /*UTILITIES*/
-/* line 156, ../../app/sass/stylesheet.scss */
+/* line 161, ../../app/sass/stylesheet.scss */
 .removed_item {
   /*transition: 2s myChange;*/
   animation-name: example;
   animation-duration: .5s;
 }
 
-/* line 163, ../../app/sass/stylesheet.scss */
+/* line 168, ../../app/sass/stylesheet.scss */
 .added_item {
   display: block !important;
 }
 
-/* line 169, ../../app/sass/stylesheet.scss */
+/* line 174, ../../app/sass/stylesheet.scss */
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }

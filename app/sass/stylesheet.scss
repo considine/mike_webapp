@@ -100,9 +100,14 @@ h3, label, li, input	{
     padding: 8px;
 
     &:hover {
-      @include rotate(-24deg);
-      @include single-transition(rotate, 2s, ease-out, 1s);
+      // @include rotate(-180deg);
+
     }
+    .animate {
+      @include rotate(-180deg);
+      display: none;
+    }
+
   }
   img.form-section-icons.left-clear {
     float: left;

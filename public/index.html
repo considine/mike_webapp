@@ -17,15 +17,16 @@
       </div>
     </div>
     <div id="section-wrapper">
-      <img ng-src="{{currentDisplayImage}}" class="form-section-icons removed_item left-clear">
+      <img ng-src="{{currentDisplayImage}}" class="form-section-icons removed_item left-clear" ng-click="animate=!animate" ng-class="{'animate': animate}"> </img>
       <div id="form-section-wrapper">
         <div  id="form-data-holder">
          <!-- FORM DATA -->
          <div ng-hide="true">
            <new-listing-form-location> </new-listing-form-location>
            <new-listing-soonest-move> </new-listing-soonest-move>
+
         </div>
-        <label for="address-label" ng-click="fetchMap($scope.input)" ng-cloak> {{$scope.input}} </label>
+        <label for="address-label" ng-click="fetchMap($scope.input)" ng-cloak>  {{animate}} </label>
         <input type="text" id="address-label" ng-model="$scope.input">
         </div> <!--End image wrapper -->
       </div> <!--End form-secion wrapper -->
