@@ -106,27 +106,27 @@ h3, label, li, input {
     vertical-align: top;
     padding: 8px;
   }
-  /* line 106, ../../app/sass/stylesheet.scss */
-  img.form-section-icons .animate {
+
+  /* line 109, ../../app/sass/stylesheet.scss */
+  .animate {
     -moz-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     -webkit-transform: rotate(-180deg);
     transform: rotate(-180deg);
-    background-color: #000000 !important;
   }
 
-  /* line 112, ../../app/sass/stylesheet.scss */
+  /* line 113, ../../app/sass/stylesheet.scss */
   img.form-section-icons.left-clear {
     float: left;
   }
 
-  /* line 115, ../../app/sass/stylesheet.scss */
+  /* line 116, ../../app/sass/stylesheet.scss */
   img.form-section-icons.right-clear {
     overflow: hidden;
     float: right;
   }
 
-  /* line 120, ../../app/sass/stylesheet.scss */
+  /* line 121, ../../app/sass/stylesheet.scss */
   div#form-data-holder {
     margin-right: auto;
     margin-left: auto;
@@ -135,31 +135,31 @@ h3, label, li, input {
   }
 
   /*Date picker*/
-  /* line 128, ../../app/sass/stylesheet.scss */
+  /* line 129, ../../app/sass/stylesheet.scss */
   #ui-datepicker-div {
     background-color: white;
     font-family: "Helvetica Neue", Arial, Sans-Serif;
     text-decoration: none;
   }
 
-  /* line 133, ../../app/sass/stylesheet.scss */
+  /* line 134, ../../app/sass/stylesheet.scss */
   #ui-datepicker-div a {
     text-decoration: none;
   }
 
   /*form*/
-  /* line 138, ../../app/sass/stylesheet.scss */
+  /* line 139, ../../app/sass/stylesheet.scss */
   .datepicker {
     margin-bottom: 16px;
     font-size: 16px;
   }
 
-  /* line 143, ../../app/sass/stylesheet.scss */
+  /* line 144, ../../app/sass/stylesheet.scss */
   label.date-picker-label {
     font-size: 16px;
   }
 
-  /* line 148, ../../app/sass/stylesheet.scss */
+  /* line 149, ../../app/sass/stylesheet.scss */
   div#google-map-holder {
     padding: 24px;
     margin-right: auto;
@@ -170,19 +170,19 @@ h3, label, li, input {
   }
 }
 /*UTILITIES*/
-/* line 161, ../../app/sass/stylesheet.scss */
+/* line 162, ../../app/sass/stylesheet.scss */
 .removed_item {
   /*transition: 2s myChange;*/
   animation-name: example;
   animation-duration: .5s;
 }
 
-/* line 168, ../../app/sass/stylesheet.scss */
+/* line 169, ../../app/sass/stylesheet.scss */
 .added_item {
   display: block !important;
 }
 
-/* line 174, ../../app/sass/stylesheet.scss */
+/* line 175, ../../app/sass/stylesheet.scss */
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }

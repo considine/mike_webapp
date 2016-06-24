@@ -103,11 +103,12 @@ h3, label, li, input	{
       // @include rotate(-180deg);
 
     }
-    .animate {
-      @include rotate(-180deg);
-      display: none;
-    }
 
+
+  }
+  .animate {
+    @include rotate(-180deg);
+    
   }
   img.form-section-icons.left-clear {
     float: left;
