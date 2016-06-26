@@ -24,3 +24,47 @@ multi column:
 @include column-gap(3em)
 @include column-rule(1px solid #ccc)
 } //borderes or rules
+
+
+@import "compass/typography"
+
+// to force a line to wrap within column size:
+@include force-wrap;
+
+#{ headings(2,4) } {
+// rules apply to h2, h4
+}
+#{ headings(all) }..
+
+
+
+p {
+  @include ellipsis; //good for readmore
+}
+
+
+critical rhythm:
+
+css foundations web typograohy
+
+
+//used to create good font size line height combo]
+$base-font-size: 16px;
+$base-line-height: 1.5em;
+@include establish-baseline;
+typically lineheight typically 1.5 times the font
+
+
+h1 {
+  @include adjust-font-size-to(36px);
+  margin-bottom: rhythm(1, 36px);
+
+}
+
+p {
+  @include trailer;
+}
+
+
+//colors:
+http://compass-style.org/reference/compass/helpers/colors/
