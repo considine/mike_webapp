@@ -1,2 +1,7 @@
 use mocha to run tests
 "npm test"
+
+to only install production modules:
+
+NODE_ENV=production npm install --python
+checkout bcrypt/salt
