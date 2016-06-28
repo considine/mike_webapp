@@ -68,3 +68,61 @@ p {
 
 //colors:
 http://compass-style.org/reference/compass/helpers/colors/
+
+
+$contrasted-lightness-threshold: 50%;
+.button {
+  @include contrasted($base); // mixin that picks the contrast color (black or white)
+}
+
+
+@compass url helpers: config where different files are
+
+
+uncomment relative assets line in config file
+
+li: last-child {
+  background-image: image-url('reward.png'); //auto find the image based on config.rb
+  width: image-width('reward.png'); // uses this image's native width
+  height: image-height('reward.png'); // uses this image's native height
+
+}
+
+
+//for switchng out text for image
+// commonly used for logos
+
+.logo {
+  display: inline-block;
+  margin-right: .2em;
+  @include replace-text('th-logo.png');
+  width: image-width();
+}
+
+inline-image('image-name'); //embeds image into css file.
+//potentially bloats the output css
+
+
+sprite sheet = way to build one large image with many differnt iamges
+a lot is automated by compass
+* they must be png files
+
+@import "icons/*.png"; //import all images
+@include all-icon-sprites; //makes sprites out of all of the images we'v eimported
+
+
+
+
+//creates class for each
+
+if we include image-hover.png for each image.png, auto uses them on the hover property
+
+$icons-spacing: 20px; // how they are spaced within the sprite
+$icons-layout: smart | vertical ...; //how sprite sheett is composed
+see naming convention
+
+
+
+in config file:
+http_images_path = "";
+http_generated_images_path = "";
