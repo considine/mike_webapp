@@ -1,0 +1,2 @@
+use mocha to run tests
+"npm test"
