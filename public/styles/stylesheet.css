@@ -1,10 +1,10 @@
-/* line 6, ../../app/sass/stylesheet.scss */
+/* line 8, ../../app/sass/stylesheet.scss */
 h3, label, li, input {
   font-family: "Helvetica Neue", Arial, Sans-Serif;
   /*display: none;*/
 }
 
-/* line 12, ../../app/sass/stylesheet.scss */
+/* line 14, ../../app/sass/stylesheet.scss */
 li.input-form.nav-item {
   margin: 0px;
   font-size: 24px;
@@ -12,7 +12,7 @@ li.input-form.nav-item {
   cursor: pointer;
 }
 
-/* line 21, ../../app/sass/stylesheet.scss */
+/* line 23, ../../app/sass/stylesheet.scss */
 ul {
   margin: 0;
   padding: 0;
@@ -43,7 +43,7 @@ ul li.last {
   padding-right: 0;
 }
 
-/* line 24, ../../app/sass/stylesheet.scss */
+/* line 26, ../../app/sass/stylesheet.scss */
 #text-logo-top {
   color: white;
   font-size: 32px;
@@ -54,12 +54,12 @@ ul li.last {
 }
 
 @media (min-width: 1025px) {
-  /* line 37, ../../app/sass/stylesheet.scss */
+  /* line 39, ../../app/sass/stylesheet.scss */
   body, p {
     margin: 0;
   }
 
-  /* line 40, ../../app/sass/stylesheet.scss */
+  /* line 42, ../../app/sass/stylesheet.scss */
   body {
     height: 100%;
     background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzZjVmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -69,7 +69,7 @@ ul li.last {
     background: linear-gradient(#f3f5ff, #ffffff);
   }
 
-  /* line 45, ../../app/sass/stylesheet.scss */
+  /* line 47, ../../app/sass/stylesheet.scss */
   div#top-header-bar {
     width: 100%;
     display: block;
@@ -77,14 +77,69 @@ ul li.last {
     background-color: #7391ff;
     margin-bottom: 16px;
   }
-
+  /* line 40, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+  div#top-header-bar div, div#top-header-bar span, div#top-header-bar applet, div#top-header-bar object, div#top-header-bar iframe,
+  div#top-header-bar h1, div#top-header-bar h2, div#top-header-bar h3, div#top-header-bar h4, div#top-header-bar h5, div#top-header-bar h6, div#top-header-bar p, div#top-header-bar blockquote, div#top-header-bar pre,
+  div#top-header-bar a, div#top-header-bar abbr, div#top-header-bar acronym, div#top-header-bar address, div#top-header-bar big, div#top-header-bar cite, div#top-header-bar code,
+  div#top-header-bar del, div#top-header-bar dfn, div#top-header-bar em, div#top-header-bar img, div#top-header-bar ins, div#top-header-bar kbd, div#top-header-bar q, div#top-header-bar s, div#top-header-bar samp,
+  div#top-header-bar small, div#top-header-bar strike, div#top-header-bar strong, div#top-header-bar sub, div#top-header-bar sup, div#top-header-bar tt, div#top-header-bar var,
+  div#top-header-bar b, div#top-header-bar u, div#top-header-bar i, div#top-header-bar center,
+  div#top-header-bar dl, div#top-header-bar dt, div#top-header-bar dd, div#top-header-bar ol, div#top-header-bar ul, div#top-header-bar li,
+  div#top-header-bar fieldset, div#top-header-bar form, div#top-header-bar label, div#top-header-bar legend,
+  div#top-header-bar table, div#top-header-bar caption, div#top-header-bar tbody, div#top-header-bar tfoot, div#top-header-bar thead, div#top-header-bar tr, div#top-header-bar th, div#top-header-bar td,
+  div#top-header-bar article, div#top-header-bar aside, div#top-header-bar canvas, div#top-header-bar details, div#top-header-bar embed,
+  div#top-header-bar figure, div#top-header-bar figcaption, div#top-header-bar footer, div#top-header-bar header, div#top-header-bar hgroup,
+  div#top-header-bar menu, div#top-header-bar nav, div#top-header-bar output, div#top-header-bar ruby, div#top-header-bar section, div#top-header-bar summary,
+  div#top-header-bar time, div#top-header-bar mark, div#top-header-bar audio, div#top-header-bar video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+  }
+  /* line 55, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+  div#top-header-bar table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  /* line 57, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+  div#top-header-bar caption, div#top-header-bar th, div#top-header-bar td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+  }
+  /* line 59, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+  div#top-header-bar q, div#top-header-bar blockquote {
+    quotes: none;
+  }
+  /* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+  div#top-header-bar q:before, div#top-header-bar q:after, div#top-header-bar blockquote:before, div#top-header-bar blockquote:after {
+    content: "";
+    content: none;
+  }
+  /* line 61, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+  div#top-header-bar a img {
+    border: none;
+  }
   /* line 54, ../../app/sass/stylesheet.scss */
+  div#top-header-bar img#nav-drawer-icon {
+    line-height: 48px;
+    height: 48px;
+    display: inline;
+  }
+  /* line 59, ../../app/sass/stylesheet.scss */
+  div#top-header-bar h1#text-logo-top {
+    display: inline;
+  }
+
+  /* line 69, ../../app/sass/stylesheet.scss */
   div#top-form-panel-wrapper {
     display: block;
     text-align: center;
   }
 
-  /* line 59, ../../app/sass/stylesheet.scss */
+  /* line 74, ../../app/sass/stylesheet.scss */
   div#top-form-panel {
     margin-left: auto;
     border-radius: 12px;
@@ -93,14 +148,14 @@ ul li.last {
     display: inline-block;
   }
 
-  /* line 68, ../../app/sass/stylesheet.scss */
+  /* line 83, ../../app/sass/stylesheet.scss */
   ul#form-nav {
     padding: 0px;
     margin: 0px;
     list-style-type: none;
   }
 
-  /* line 74, ../../app/sass/stylesheet.scss */
+  /* line 89, ../../app/sass/stylesheet.scss */
   li.input-form.nav-item {
     margin: 0px;
     padding: 10px;
@@ -109,26 +164,26 @@ ul li.last {
     cursor: pointer;
   }
 
-  /* line 83, ../../app/sass/stylesheet.scss */
+  /* line 98, ../../app/sass/stylesheet.scss */
   li.unviewed-nav-item {
     color: #929292;
     color: gray;
     cursor: default !important;
   }
 
-  /* line 89, ../../app/sass/stylesheet.scss */
+  /* line 104, ../../app/sass/stylesheet.scss */
   li.selected-nav-item {
     background-color: white;
     /*background-color: #b7dbff;*/
   }
 
-  /* line 97, ../../app/sass/stylesheet.scss */
+  /* line 112, ../../app/sass/stylesheet.scss */
   div#section-wrapper {
     padding: 24px;
     overflow: hidden;
   }
 
-  /* line 101, ../../app/sass/stylesheet.scss */
+  /* line 116, ../../app/sass/stylesheet.scss */
   div#form-section-wrapper {
     overflow: hidden;
     margin-right: 48px;
@@ -136,7 +191,7 @@ ul li.last {
     background-color: gray;
   }
 
-  /* line 107, ../../app/sass/stylesheet.scss */
+  /* line 122, ../../app/sass/stylesheet.scss */
   img.form-section-icons {
     height: 48px;
     width: 48px;
@@ -146,7 +201,7 @@ ul li.last {
     padding: 8px;
   }
 
-  /* line 122, ../../app/sass/stylesheet.scss */
+  /* line 137, ../../app/sass/stylesheet.scss */
   .animate {
     -moz-transform: translateX(100px);
     -webkit-transform: translateX(100px);
@@ -158,18 +213,18 @@ ul li.last {
     transition: transform 0.5s ease-out 0s;
   }
 
-  /* line 128, ../../app/sass/stylesheet.scss */
+  /* line 143, ../../app/sass/stylesheet.scss */
   img.form-section-icons.left-clear {
     float: left;
   }
 
-  /* line 131, ../../app/sass/stylesheet.scss */
+  /* line 146, ../../app/sass/stylesheet.scss */
   img.form-section-icons.right-clear {
     overflow: hidden;
     float: right;
   }
 
-  /* line 136, ../../app/sass/stylesheet.scss */
+  /* line 151, ../../app/sass/stylesheet.scss */
   div#form-data-holder {
     margin-right: auto;
     margin-left: auto;
@@ -178,31 +233,31 @@ ul li.last {
   }
 
   /*Date picker*/
-  /* line 144, ../../app/sass/stylesheet.scss */
+  /* line 159, ../../app/sass/stylesheet.scss */
   #ui-datepicker-div {
     background-color: white;
     font-family: "Helvetica Neue", Arial, Sans-Serif;
     text-decoration: none;
   }
 
-  /* line 149, ../../app/sass/stylesheet.scss */
+  /* line 164, ../../app/sass/stylesheet.scss */
   #ui-datepicker-div a {
     text-decoration: none;
   }
 
   /*form*/
-  /* line 154, ../../app/sass/stylesheet.scss */
+  /* line 169, ../../app/sass/stylesheet.scss */
   .datepicker {
     margin-bottom: 16px;
     font-size: 16px;
   }
 
-  /* line 159, ../../app/sass/stylesheet.scss */
+  /* line 174, ../../app/sass/stylesheet.scss */
   label.date-picker-label {
     font-size: 16px;
   }
 
-  /* line 164, ../../app/sass/stylesheet.scss */
+  /* line 179, ../../app/sass/stylesheet.scss */
   div#google-map-holder {
     padding: 24px;
     margin-right: auto;
@@ -213,19 +268,19 @@ ul li.last {
   }
 }
 /*UTILITIES*/
-/* line 177, ../../app/sass/stylesheet.scss */
+/* line 192, ../../app/sass/stylesheet.scss */
 .removed_item {
   /*transition: 2s myChange;*/
   animation-name: example;
   animation-duration: .5s;
 }
 
-/* line 184, ../../app/sass/stylesheet.scss */
+/* line 199, ../../app/sass/stylesheet.scss */
 .added_item {
   display: block !important;
 }
 
-/* line 190, ../../app/sass/stylesheet.scss */
+/* line 205, ../../app/sass/stylesheet.scss */
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }

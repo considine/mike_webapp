@@ -3,6 +3,8 @@
 @import '_variables.scss';
 @import "compass/css3";
 @import "compass/utilities";
+@import "compass/reset/utilities";
+
 h3, label, li, input	{
 
     font-family: "Helvetica Neue", Arial, Sans-Serif;
@@ -45,11 +47,24 @@ ul {
   div#top-header-bar {
     width: 100%;
     display: block;
-    height: 48px;
+    height: $top-bar-height;
     background-color: $top-bar;
     margin-bottom: 16px;
+    @include nested-reset;
+    img#nav-drawer-icon {
+      line-height: $top-bar-height;
+      height: $top-bar-height;
+      display: inline;
+    }
+    h1#text-logo-top{
+      display: inline;
+      // line-height: $top-bar-height;
+
+    }
+
 
   }
+
 
   div#top-form-panel-wrapper {
     display: block;
