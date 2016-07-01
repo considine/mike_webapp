@@ -126,3 +126,5 @@ see naming convention
 in config file:
 http_images_path = "";
 http_generated_images_path = "";
+
+environment =:production

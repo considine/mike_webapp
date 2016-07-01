@@ -1,7 +1,10 @@
 'use strict';
-
 var angular = require('angular');
-angular.module('formApp', []);
+
+
+
+
+angular.module('formApp', ['snap']);
 
 require('./scripts/services');
 require('./scripts/directives');

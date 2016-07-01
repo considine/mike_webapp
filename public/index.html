@@ -7,8 +7,16 @@
   <link rel="stylesheet" href="styles/animations.css" type="text/css">
 
   </head><body ng-app="formApp" ng-controller="mainCtrl">
-
+    <snap-drawer style="background-color: black;">
+      <h3>Hello from drawer</h3>
+      <button snap-close class="btn btn-danger">
+        Close
+      </button>
+    </snap-drawer>
+      <snap-content>
     <site-header> </site-header>
+
+
     <div id="top-form-panel-wrapper">
       <div id="top-form-panel">
         <ul id="form-nav" ng-cloak>
@@ -34,10 +42,15 @@
     <div id="google-map-holder">
       <img src="./img/indicator.gif"></img>
     </div>
+  </snap-content>
   <script src="scripts/vendor.bundle.js"></script>
+  <!-- <script src="scripts/snap.min.js"> </script> -->
+  <script src="scripts/angular-snap.min.js"></script>
+
   <script src="scripts/todo.bundle.js"></script>
 
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
   <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script> -->
   <script src="scripts/jquery/jquery-ui.js"></script>
   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
