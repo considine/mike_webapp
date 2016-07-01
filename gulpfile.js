@@ -9,7 +9,7 @@ gulp.task("concatScripts", function () {
   gulp.src([
     'app/scripts/snap.min.js',
     'app/scripts/angular-snap.min.js',
-    'app/scripts/todo.bundle.js',
+    'public/scripts/todo.bundle.js',
     'app/scripts/maps/map_insert.js'
   ])
   .pipe(concat('app.js'))
