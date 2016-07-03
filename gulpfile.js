@@ -23,3 +23,10 @@ gulp.task("concatScripts", function () {
   .pipe(concat('jquery.js'))
   .pipe(gulp.dest('public/scripts'));
 });
+
+
+gulp.task('minifyScripts', function () {
+  gulp.src('public/scripts/jquery.js')
+  .pipe(uglify())
+  .pipe(gulp.dest('public/scripts'))
+});
