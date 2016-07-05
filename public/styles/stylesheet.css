@@ -75,52 +75,6 @@ ul li.last {
     display: block;
     height: 48px;
     background-color: #7391ff;
-    margin-bottom: 16px;
-  }
-  /* line 40, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-  div#top-header-bar div, div#top-header-bar span, div#top-header-bar applet, div#top-header-bar object, div#top-header-bar iframe,
-  div#top-header-bar h1, div#top-header-bar h2, div#top-header-bar h3, div#top-header-bar h4, div#top-header-bar h5, div#top-header-bar h6, div#top-header-bar p, div#top-header-bar blockquote, div#top-header-bar pre,
-  div#top-header-bar a, div#top-header-bar abbr, div#top-header-bar acronym, div#top-header-bar address, div#top-header-bar big, div#top-header-bar cite, div#top-header-bar code,
-  div#top-header-bar del, div#top-header-bar dfn, div#top-header-bar em, div#top-header-bar img, div#top-header-bar ins, div#top-header-bar kbd, div#top-header-bar q, div#top-header-bar s, div#top-header-bar samp,
-  div#top-header-bar small, div#top-header-bar strike, div#top-header-bar strong, div#top-header-bar sub, div#top-header-bar sup, div#top-header-bar tt, div#top-header-bar var,
-  div#top-header-bar b, div#top-header-bar u, div#top-header-bar i, div#top-header-bar center,
-  div#top-header-bar dl, div#top-header-bar dt, div#top-header-bar dd, div#top-header-bar ol, div#top-header-bar ul, div#top-header-bar li,
-  div#top-header-bar fieldset, div#top-header-bar form, div#top-header-bar label, div#top-header-bar legend,
-  div#top-header-bar table, div#top-header-bar caption, div#top-header-bar tbody, div#top-header-bar tfoot, div#top-header-bar thead, div#top-header-bar tr, div#top-header-bar th, div#top-header-bar td,
-  div#top-header-bar article, div#top-header-bar aside, div#top-header-bar canvas, div#top-header-bar details, div#top-header-bar embed,
-  div#top-header-bar figure, div#top-header-bar figcaption, div#top-header-bar footer, div#top-header-bar header, div#top-header-bar hgroup,
-  div#top-header-bar menu, div#top-header-bar nav, div#top-header-bar output, div#top-header-bar ruby, div#top-header-bar section, div#top-header-bar summary,
-  div#top-header-bar time, div#top-header-bar mark, div#top-header-bar audio, div#top-header-bar video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
-  }
-  /* line 55, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-  div#top-header-bar table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  /* line 57, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-  div#top-header-bar caption, div#top-header-bar th, div#top-header-bar td {
-    text-align: left;
-    font-weight: normal;
-    vertical-align: middle;
-  }
-  /* line 59, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-  div#top-header-bar q, div#top-header-bar blockquote {
-    quotes: none;
-  }
-  /* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-  div#top-header-bar q:before, div#top-header-bar q:after, div#top-header-bar blockquote:before, div#top-header-bar blockquote:after {
-    content: "";
-    content: none;
-  }
-  /* line 61, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-  div#top-header-bar a img {
-    border: none;
   }
   /* line 54, ../../app/sass/stylesheet.scss */
   div#top-header-bar img#nav-drawer-icon {
@@ -131,15 +85,17 @@ ul li.last {
   /* line 59, ../../app/sass/stylesheet.scss */
   div#top-header-bar h1#text-logo-top {
     display: inline;
+    line-height: 48px;
+    vertical-align: top;
   }
 
-  /* line 69, ../../app/sass/stylesheet.scss */
+  /* line 70, ../../app/sass/stylesheet.scss */
   div#top-form-panel-wrapper {
     display: block;
     text-align: center;
   }
 
-  /* line 74, ../../app/sass/stylesheet.scss */
+  /* line 75, ../../app/sass/stylesheet.scss */
   div#top-form-panel {
     margin-left: auto;
     border-radius: 12px;
@@ -148,14 +104,14 @@ ul li.last {
     display: inline-block;
   }
 
-  /* line 83, ../../app/sass/stylesheet.scss */
+  /* line 84, ../../app/sass/stylesheet.scss */
   ul#form-nav {
     padding: 0px;
     margin: 0px;
     list-style-type: none;
   }
 
-  /* line 89, ../../app/sass/stylesheet.scss */
+  /* line 90, ../../app/sass/stylesheet.scss */
   li.input-form.nav-item {
     margin: 0px;
     padding: 10px;
@@ -164,31 +120,30 @@ ul li.last {
     cursor: pointer;
   }
 
-  /* line 98, ../../app/sass/stylesheet.scss */
+  /* line 99, ../../app/sass/stylesheet.scss */
   li.unviewed-nav-item {
     color: #929292;
     color: gray;
     cursor: default !important;
   }
 
-  /* line 104, ../../app/sass/stylesheet.scss */
+  /* line 105, ../../app/sass/stylesheet.scss */
   li.selected-nav-item {
     background-color: white;
     /*background-color: #b7dbff;*/
   }
 
-  /* line 112, ../../app/sass/stylesheet.scss */
+  /* line 113, ../../app/sass/stylesheet.scss */
   div#section-wrapper {
     padding: 24px;
     overflow: hidden;
   }
 
-  /* line 116, ../../app/sass/stylesheet.scss */
+  /* line 117, ../../app/sass/stylesheet.scss */
   div#form-section-wrapper {
     overflow: hidden;
     margin-right: 48px;
     /*TODO use SASS to automate this*/
-    background-color: gray;
   }
 
   /* line 122, ../../app/sass/stylesheet.scss */

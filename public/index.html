@@ -34,8 +34,10 @@
            <new-listing-soonest-move> </new-listing-soonest-move>
 
         </div>
-        <label for="address-label" ng-click="fetchMap($scope.input)" ng-cloak>  {{$scope.input}} </label>
-        <input type="text" id="address-label" ng-model="$scope.input">
+        <div ng-repeat="item in doc">
+          <label for="address-label" ng-click="fetchMap($scope.input)" ng-cloak>  {{$scope.input}} </label>
+          <input type="text" id="address-label" ng-model="$scope.input">
+        </div>
         </div> <!--End image wrapper -->
       </div> <!--End form-secion wrapper -->
     </div> <!-- End section wrapper-->
@@ -46,6 +48,6 @@
   <script src="scripts/vendor.bundle.js"></script>
   <script src="scripts/app.js"> </script>
   <script src="scripts/jquery.js"> </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPCkkkkP7BAsionEIyZsR_z7ur3Ehr3NU&callback=initMap"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPCkkkkP7BAsionEIyZsR_z7ur3Ehr3NU&callback=initMap"></script> -->
   </body>
 </html>

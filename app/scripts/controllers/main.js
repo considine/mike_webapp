@@ -28,9 +28,27 @@ function MainCtrl($scope, dataService, addressService){
     $scope.currentDisplayImage = $scope.layout_info[index].data[0].imgSrc;
   }
 
+  $scope.doc = ["hi", "bye"];
+
+
 
 
 
 }
 
 module.exports = MainCtrl;
+
+
+//index:
+/*
+
+funcs
+Fetchmap:
+  gets address from google maps
+run:
+  Sets up icons and dash
+-properties:
+doc.data
+  daa on inputs
+
+*/

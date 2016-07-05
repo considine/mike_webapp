@@ -49,8 +49,8 @@ ul {
     display: block;
     height: $top-bar-height;
     background-color: $top-bar;
-    margin-bottom: 16px;
-    @include nested-reset;
+    // margin-bottom: 16px;
+
     img#nav-drawer-icon {
       line-height: $top-bar-height;
       height: $top-bar-height;
@@ -58,7 +58,8 @@ ul {
     }
     h1#text-logo-top{
       display: inline;
-      // line-height: $top-bar-height;
+      line-height: $top-bar-height;
+      vertical-align: top;
 
     }
 
@@ -116,7 +117,6 @@ ul {
   div#form-section-wrapper {
     overflow: hidden;
     margin-right: 48px; /*TODO use SASS to automate this*/
-    background-color: gray;
   }
 
   img.form-section-icons {
