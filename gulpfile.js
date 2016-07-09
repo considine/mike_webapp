@@ -1,11 +1,11 @@
 "use strict";
 
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var sass = require('gulp-sass');
-var maps = require('gulp-sourcemaps');
-
+var gulp = require('gulp'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify'),
+  sass = require('gulp-sass'),
+  maps = require('gulp-sourcemaps'),
+  del = require('del');
 
 gulp.task("concatScriptsAngular", function () {
 
@@ -56,8 +56,14 @@ gulp.task('compileSass', function () {
   .pipe(gulp.dest('public/styles'));
 });
 
+gulp.task('clean', function () {
+  del (['dist']);
+});
+
 
 gulp.task('build', ['minifyScripts']);
+
+
 
 gulp.task('deployBuild', ['minifyScripts'], function () {
   //move relevant files to its own directory
@@ -65,3 +71,9 @@ gulp.task('deployBuild', ['minifyScripts'], function () {
   return gulp.src(["public/styles/stylesheet.css", "public/scripts/**", "public/img/**/*"], {base: './'})
   .pipe(gulp.dest('dist'));
 });
+
+
+// gulp start will changei n gulp 4
+gulp.task('default', ['clean'], function () {
+  gulp.start('deployBuild');
+})
