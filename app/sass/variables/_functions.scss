@@ -1,0 +1,13 @@
+@function split($color, $diff: normal) {
+  @if $diff == normal {
+    @return $color;
+  }
+  @if $diff == s1 {
+    @return adjust-hue($color, 150deg);
+  }
+  @if $diff == s2 {
+    @return adjust-hue($color, 210deg);
+  }
+  
+
+}

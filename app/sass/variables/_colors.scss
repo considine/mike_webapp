@@ -1,0 +1,20 @@
+
+//COLORS
+$blue-theme : #0d41ff;
+$white : #FFF;
+$black : #000;
+
+
+
+$desaturate : 60%;
+
+$top-bar : desaturate(lighten($blue-theme, 20%), 20%);
+$map-holder-background: transparentize($black, .3);
+
+$form-header : lighten($black, 80%);
+$background: lighten($blue-theme, 95%);
+$section-bar : lighten($blue-theme, 60%);
+$top-gradient : lighten($black, 80%);
+
+
+//DIMENSIONS

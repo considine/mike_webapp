@@ -24,8 +24,8 @@ webpackJsonp([0],[
 	angular.module('formApp', ['snap']);
 
 	__webpack_require__(3);
-	__webpack_require__(6);
-	__webpack_require__(10);
+	__webpack_require__(7);
+	__webpack_require__(12);
 
 
 /***/ },
@@ -39,7 +39,8 @@ webpackJsonp([0],[
 
 
 	angular.module('formApp').service('dataService', __webpack_require__(4));
-	angular.module('formApp').service('addressService', __webpack_require__(5)); 
+	angular.module('formApp').service('addressService', __webpack_require__(5));
+	angular.module('formApp').service('mapService', __webpack_require__(6)); 
 
 
 /***/ },
@@ -83,19 +84,40 @@ webpackJsonp([0],[
 
 /***/ },
 /* 6 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+
+	function getMapScript () {
+	  this.getMap = function () {
+	     var script = document.createElement('script');
+	    script.type = 'text/javascript';
+	    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDPCkkkkP7BAsionEIyZsR_z7ur3Ehr3NU&callback=initMap';
+	    document.body.appendChild(script);
+	  }; 
+
+	}
+
+	module.exports = getMapScript;
+
+
+/***/ },
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var angular = __webpack_require__(1);
 	//TODO increase this scope
-	angular.module('formApp').directive('siteHeader', __webpack_require__(7));
-	angular.module('formApp').directive('newListingFormLocation', __webpack_require__(8));
-	angular.module('formApp').directive('newListingSoonestMove', __webpack_require__(9));
+	angular.module('formApp').directive('siteHeader', __webpack_require__(8));
+	angular.module('formApp').directive('newListingFormLocation', __webpack_require__(9));
+	angular.module('formApp').directive('newListingSoonestMove', __webpack_require__(10));
+	angular.module('formApp').directive('locationForm', __webpack_require__(11));
 
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports) {
 
 	// <div id="top-header-bar">
@@ -115,7 +137,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	// Some templates used
@@ -158,7 +180,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	function soonestMove () {
@@ -177,19 +199,35 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
+/* 11 */
+/***/ function(module, exports) {
 
-	angular.module('formApp').controller('mainCtrl', __webpack_require__(11));
+	function locationData () {
+	  return {
+	    templateUrl: 'templates/location_data.html',
+	    //template: '<div id="top-header-bar"></div>',
+	    replace: true,
+	    controller: 'mainCtrl'
+	  };
+	}
+
+	module.exports = locationData;
 
 
 /***/ },
-/* 11 */
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	angular.module('formApp').controller('mainCtrl', __webpack_require__(13));
+
+
+/***/ },
+/* 13 */
 /***/ function(module, exports) {
 
 	'use strict';
 
-	function MainCtrl($scope, dataService, addressService){
+	function MainCtrl($scope, dataService, addressService, mapService){
 	  //TODO make this be dependent of where they were last
 
 
@@ -201,6 +239,13 @@ webpackJsonp([0],[
 	    $scope.run($scope.landingOption);
 
 	  })
+
+	  $scope.setMap = function () {
+	      mapService.getMap();
+	  }
+
+
+	//TODO rename this RUSTYBUSTY
 	  $scope.fetchMap = function (input) {
 	    var address = input.replace(/ /g,"+");
 	    addressService.getAddress(address, function (response) {
@@ -217,7 +262,13 @@ webpackJsonp([0],[
 	    $scope.currentDisplayImage = $scope.layout_info[index].data[0].imgSrc;
 	  }
 
-	  $scope.doc = ["hi", "bye"];
+
+
+	//for the snap drawer
+	  $scope.opts = {
+	    disable: 'right'
+	  };
+
 
 
 
@@ -275,26 +326,27 @@ function initMap() {
     center: uluru
   });
 
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-      '<div id="bodyContent">'+
-      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-      'sandstone rock formation in the southern part of the '+
-      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-      'south west of the nearest large town, Alice Springs; 450&#160;km '+
-      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-      'Aboriginal people of the area. It has many springs, waterholes, '+
-      'rock caves and ancient paintings. Uluru is listed as a World '+
-      'Heritage Site.</p>'+
-      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-      '(last visited June 22, 2009).</p>'+
-      '</div>'+
-      '</div>';
+  var contentString = '<h1 style="color: black;"> HELO </h1>';
+      // '<div id="siteNotice">'+
+      // '</div>'+
+      // '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+      // '<div id="bodyContent">'+
+      // '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+      // 'sandstone rock formation in the southern part of the '+
+      // 'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+      // 'south west of the nearest large town, Alice Springs; 450&#160;km '+
+      // '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+      // 'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+      // 'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+      // 'Aboriginal people of the area. It has many springs, waterholes, '+
+      // 'rock caves and ancient paintings. Uluru is listed as a World '+
+      // 'Heritage Site.</p>'+
+      // '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      // 'dick</a> '+
+      // '(last visited June 22, 2009).</p>'+
+      // '</div>'+
+      // '</div>';
+
 
   var infowindow = new google.maps.InfoWindow({
     content: contentString

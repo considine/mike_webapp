@@ -1,9 +1,12 @@
 
 
-@import '_variables.scss';
+@import 'variables/_colors.scss';
+@import 'variables/_dimens.scss';
+@import 'variables/_functions.scss';
 @import "compass/css3";
 @import "compass/utilities";
 @import "compass/reset/utilities";
+@import "module_sass/_index.scss";
 
 h3, label, li, input	{
 
@@ -34,159 +37,178 @@ ul {
 }
 
 
-@media (min-width:1025px) {
+// @media (min-width:700px) {
 
-  body, p{
-    margin: 0;
-  }
-  body {
-    height: 100%;
-    @include background(linear-gradient($top-gradient, $white));
-    // background-color: $background;
-  }
-  div#top-header-bar {
-    width: 100%;
-    display: block;
+body, p{
+  margin: 0;
+}
+body {
+  height: 100%;
+  @include background(linear-gradient($top-gradient, $white));
+  // background-color: $background;
+}
+div#top-header-bar {
+  width: 100%;
+  display: block;
+  height: $top-bar-height;
+  background-color: $top-bar;
+  // margin-bottom: 16px;
+
+  img#nav-drawer-icon {
+    line-height: $top-bar-height;
     height: $top-bar-height;
-    background-color: $top-bar;
-    // margin-bottom: 16px;
-
-    img#nav-drawer-icon {
-      line-height: $top-bar-height;
-      height: $top-bar-height;
-      display: inline;
-    }
-    h1#text-logo-top{
-      display: inline;
-      line-height: $top-bar-height;
-      vertical-align: top;
-
-    }
-
-
+    display: inline;
   }
-
-
-  div#top-form-panel-wrapper {
-    display: block;
-     text-align: center;
-  }
-
-  div#top-form-panel {
-    margin-left: auto;
-    border-radius: 12px;
-    overflow:hidden;
-
-    margin-right: auto;
-    display: inline-block;
-  }
-
-  ul#form-nav  {
-      padding: 0px;
-      margin: 0px;
-      list-style-type: none;
-  }
-
-  li.input-form.nav-item {
-      margin: 0px;
-      // display: inline-block;
-      padding: 10px;
-      font-size: 24px;
-      background-size: 10%;
-      cursor: pointer;
-  }
-
-  li.unviewed-nav-item {
-
-    color: #929292;
-    color: gray;
-    cursor: default !important;
-  }
-  li.selected-nav-item {
-    background-color: white;
-
-    /*background-color: #b7dbff;*/
-  }
-
-
-
-  div#section-wrapper {
-    padding: 24px;
-    overflow: hidden;
-  }
-  div#form-section-wrapper {
-    overflow: hidden;
-    margin-right: 48px; /*TODO use SASS to automate this*/
-  }
-
-  img.form-section-icons {
-    height: 48px;
-    width: 48px;
-    /*display: inline-block;*/
-    float: left;
+  h1#text-logo-top{
+    display: inline;
+    line-height: $top-bar-height;
     vertical-align: top;
-    padding: 8px;
 
-    &:hover {
-      // @include rotate(-180deg);
+  }
 
+
+}
+
+
+div#top-form-panel-wrapper {
+    display: block;
+   text-align: center;
+}
+
+div#top-form-panel {
+  margin-top: $base-margin * 2;
+  margin-left: auto;
+  border-radius: 12px;
+  border: solid 1px gray;
+  overflow:hidden;
+  // background-color: $form-header;
+  background-color:split($top-bar, s2);
+  margin-right: auto;
+  display: inline-block;
+}
+
+ul#form-nav  {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+li.input-form.nav-item {
+    margin: 0px;
+    // display: inline-block;
+    padding: 10px;
+    font-size: 24px;
+    background-size: 10%;
+    cursor: pointer;
+    @media (max-width:700px) {
+      display: none;
     }
+}
+
+li.unviewed-nav-item {
+
+  background-color: $form-header;
+  color: gray;
+  cursor: default !important;
+
+}
+li.selected-nav-item {
+  // background-color: white;
+  // background-color: complement($top-bar);
+  background-color:split($top-bar, s1);
+  display: block !important;
+  /*background-color: #b7dbff;*/
+}
 
 
-  }
-  .animate {
+
+div#section-wrapper {
+  padding: 24px;
+  overflow: hidden;
+}
+div#form-section-wrapper {
+  overflow: hidden;
+  
+}
+
+img.form-section-icons {
+  height: 48px;
+  width: 48px;
+  /*display: inline-block;*/
+  float: left;
+  vertical-align: top;
+  padding: 8px;
+
+  &:hover {
     // @include rotate(-180deg);
-    @include transform(translateX(100px), rotateX(45deg));
-    @include single-transition(transform, .5s, ease-out, 0s);
 
   }
-  img.form-section-icons.left-clear {
-    float: left;
-  }
-  img.form-section-icons.right-clear {
-    overflow: hidden;
-    float: right;
-  }
 
-  div#form-data-holder {
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    width: 50%;
-  }
 
-  /*Date picker*/
-  #ui-datepicker-div  {
-    background-color: white;
-    font-family: "Helvetica Neue", Arial, Sans-Serif;
-    text-decoration: none;
-  }
-  #ui-datepicker-div a {
-    text-decoration: none;
-  }
+}
+.animate {
+  // @include rotate(-180deg);
+  @include transform(translateX(100px), rotateX(45deg));
+  @include single-transition(transform, .5s, ease-out, 0s);
 
-  /*form*/
-  .datepicker {
-    margin-bottom: 16px;
-    font-size: 16px;
-  }
+}
+img.form-section-icons.left-clear {
+  float: left;
+}
+img.form-section-icons.right-clear {
+  overflow: hidden;
+  float: right;
+}
 
-  label.date-picker-label {
+div#form-data-holder {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 100%;
+}
 
-    font-size: 16px;
-  }
+/*Date picker*/
+#ui-datepicker-div  {
+  background-color: white;
+  font-family: "Helvetica Neue", Arial, Sans-Serif;
+  text-decoration: none;
+}
+#ui-datepicker-div a {
+  text-decoration: none;
+}
 
+/*form*/
+.datepicker {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+label.date-picker-label {
+
+  font-size: 16px;
+}
+
+div#google-map-wrapper {
   div#google-map-holder{
     padding: 24px;
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
-    height: $google-map-height;
+    background-color: $map-holder-background;
+    color: $white;
     width: $google-map-width;
+    max-width: $max-map;
+    padding-top: $google-map-width;
+    height: 100%;
+    max-height: $max-map;
+    overflow: hidden;
   }
-
-
+    max-height: $max-map;
+    overflow: hidden;
 }
+
+
+
 
 /*UTILITIES*/
 .removed_item {
@@ -209,176 +231,3 @@ ul {
 
 
 // SNAP CONTENT
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-snap-content,
-[snap\:content],
-[snap-content],
-[data-snap-content],
-[x-snap-content],
-.snap-content,
-.x-snap-content,
-snap-drawers,
-[snap\:drawers],
-[snap-drawers],
-[data-snap-drawers],
-[x-snap-drawers],
-.snap-drawers,
-.x-snap-drawers,
-.snap-drawers,
-.snap-content {
-  position: absolute;
-  height: auto;
-  top: 0;
-  bottom: 0;
-  width: auto;
-  left: 0;
-  right: 0;
-}
-snap-drawer,
-[snap\:drawer],
-[snap-drawer],
-[data-snap-drawer],
-[x-snap-drawer],
-.snap-drawer,
-.x-snap-drawer,
-.snap-drawer {
-  position: absolute;
-  height: auto;
-  top: 0;
-  bottom: 0;
-  overflow: auto;
-  -webkit-transition: top 0.2s linear;
-  -moz-transition: top 0.2s linear;
-  -o-transition: top 0.2s linear;
-  transition: top 0.2s linear;
-  -webkit-transition: bottom 0.2s linear;
-  -moz-transition: bottom 0.2s linear;
-  -o-transition: bottom 0.2s linear;
-  transition: bottom 0.2s linear;
-  -webkit-overflow-scrolling: touch;
-  -moz-overflow-scrolling: touch;
-  -o-overflow-scrolling: touch;
-  overflow-scrolling: touch;
-  width: 265px;
-}
-.snap-content {
-  z-index: 2;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  -moz-overflow-scrolling: touch;
-  -o-overflow-scrolling: touch;
-  overflow-scrolling: touch;
-}
-.snap-drawer-left {
-  left: 0;
-  z-index: 1;
-}
-.snap-drawer-right {
-  right: 0;
-  z-index: 1;
-}
-.snapjs-left .snap-drawer-right,
-.snapjs-right .snap-drawer-left {
-  display: none;
-}
-.snapjs-expand-left .snap-drawer-left,
-.snapjs-expand-right .snap-drawer-right {
-  width: 100%;
-}
-
-
-
-html, body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.snap-content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-  z-index: 2;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  -webkit-transform: translate3d(0, 0, 0);
-     -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-       -o-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-}
-
-.snap-drawers {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-}
-
-.snap-drawer {
-  position: absolute;
-  top: 0;
-  right: auto;
-  bottom: 0;
-  left: auto;
-  width: 265px;
-  height: auto;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  -webkit-transition: width 0.3s ease;
-     -moz-transition: width 0.3s ease;
-      -ms-transition: width 0.3s ease;
-       -o-transition: width 0.3s ease;
-          transition: width 0.3s ease;
-}
-
-.snap-drawer-left {
-  left: 0;
-  z-index: 1;
-}
-
-.snap-drawer-right {
-  right: 0;
-  z-index: 1;
-}
-
-.snapjs-left .snap-drawer-right,
-.snapjs-right .snap-drawer-left {
-  display: none;
-}
-
-.snapjs-expand-left .snap-drawer-left,
-.snapjs-expand-right .snap-drawer-right {
-  width: 100%;
-}
-
-
-snap-content {
-  background-color: white;
-  box-shadow: 0 0 10px #aaa;
-}
-
-snap-drawer {
-  padding: 0 15px;
-}

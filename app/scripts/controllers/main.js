@@ -1,6 +1,6 @@
 'use strict';
 
-function MainCtrl($scope, dataService, addressService){
+function MainCtrl($scope, dataService, addressService, mapService){
   //TODO make this be dependent of where they were last
 
 
@@ -12,6 +12,13 @@ function MainCtrl($scope, dataService, addressService){
     $scope.run($scope.landingOption);
 
   })
+
+  $scope.setMap = function () {
+      mapService.getMap();
+  }
+
+
+//TODO rename this RUSTYBUSTY
   $scope.fetchMap = function (input) {
     var address = input.replace(/ /g,"+");
     addressService.getAddress(address, function (response) {
@@ -28,7 +35,13 @@ function MainCtrl($scope, dataService, addressService){
     $scope.currentDisplayImage = $scope.layout_info[index].data[0].imgSrc;
   }
 
-  $scope.doc = ["hi", "bye"];
+
+
+//for the snap drawer
+  $scope.opts = {
+    disable: 'right'
+  };
+
 
 
 

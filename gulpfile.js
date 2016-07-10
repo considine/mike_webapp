@@ -5,9 +5,11 @@ var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   sass = require('gulp-sass'),
   maps = require('gulp-sourcemaps'),
-  del = require('del');
+  del = require('del'),
+  webpack = require('gulp-webpack'),
+  compass = require('gulp-compass');
 
-gulp.task("concatScriptsAngular", function () {
+gulp.task("concatScriptsAngular", ['buildModules'], function () {
 
   return gulp.src([
     'app/scripts/snap.min.js',
@@ -45,13 +47,17 @@ gulp.task('minifyScripts', ['concatScriptsAngular'], function () {
 // fix "compileSass"
 gulp.task('watchSass', function () {
   //globbign patterns
-  gulp.watch('scss/**/*.scss', ['compileSass']);
+  gulp.watch('app/sass/**', ['compileSass']);
 });
 
 gulp.task('compileSass', function () {
-  gulp.src("app/sass/applications.scss")
+  gulp.src("app/sass/stylesheet.scss")
   .pipe(maps.init())
-  .pipe(sass())
+  .pipe(compass({
+      config_file: './config.rb',
+      css: 'public/styles',
+      sass: 'app/sass'
+    }))
   .pipe(maps.write('./')) // Relative to the output directory
   .pipe(gulp.dest('public/styles'));
 });
@@ -63,9 +69,18 @@ gulp.task('clean', function () {
 
 gulp.task('build', ['minifyScripts']);
 
+gulp.task('watchAngular', function () {
+  gulp.watch('app/scripts/**', ['minifyScripts']);
+});
+
+gulp.task('buildModules', function () {
+  return gulp.src(['app/scripts/**'])
+  .pipe(webpack( require('./webpack.config.js') ))
+  .pipe(gulp.dest('public/scripts'));
+});
 
 
-gulp.task('deployBuild', ['minifyScripts'], function () {
+gulp.task('deployBuild', ['buildModules', 'minifyScripts'], function () {
   //move relevant files to its own directory
   //todo: make sure all css files compile into only one
   return gulp.src(["public/styles/stylesheet.css", "public/scripts/**", "public/img/**/*"], {base: './'})
