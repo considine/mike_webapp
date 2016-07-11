@@ -340,19 +340,19 @@ snap-content {
   overflow: hidden !important;
 }
 
-@media (min-height: 200px) {
+@media (min-height: 100px) {
   div#main-content-form {
     height: 40%;
   }
   div#main-content-form #top-form-panel {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: -4px;
+    margin-bottom: -4px;
   }
   div#main-content-form #top-form-panel ul li {
-    font-size: 8px;
+    font-size: 4px;
   }
   div#main-content-form #form-section-wrapper #form-data-holder .container input {
-    height: 12px;
+    height: 6px;
   }
 }
 @media (min-height: 400px) {
