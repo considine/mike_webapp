@@ -7,6 +7,7 @@
 @import "compass/utilities";
 @import "compass/reset/utilities";
 @import "module_sass/_index.scss";
+@import "mixins/_index.scss";
 
 h3, label, li, input	{
 
@@ -120,15 +121,40 @@ li.selected-nav-item {
   /*background-color: #b7dbff;*/
 }
 
-
-
-div#section-wrapper {
-  padding: 24px;
-  overflow: hidden;
+snap-content {
+  height: 100%;
+  overflow: hidden !important;
 }
+
+ div#main-content-form {
+   $content-height-1: 400px;
+   $content-height-2: 500px;
+   $content-height-3: 600px;
+    $content-height-0: 200px;
+
+    @media (min-height: $content-height-0) {
+
+       @include vertical-form-height ($content-height-0);
+    }
+   @media (min-height: $content-height-1) {
+
+      @include vertical-form-height ($content-height-1);
+   }
+   @media (min-height: $content-height-2) {
+
+      @include vertical-form-height ($content-height-2);
+   }
+   @media (min-height: $content-height-3) {
+
+      @include vertical-form-height ($content-height-3);
+   }
+
+
+}
+
 div#form-section-wrapper {
   overflow: hidden;
-  
+
 }
 
 img.form-section-icons {
@@ -148,8 +174,8 @@ img.form-section-icons {
 }
 .animate {
   // @include rotate(-180deg);
-  @include transform(translateX(100px), rotateX(45deg));
-  @include single-transition(transform, .5s, ease-out, 0s);
+  @include transform(translateX(-6000px), rotateX(45deg));
+  @include single-transition(transform, 2s, ease-out, 0s);
 
 }
 img.form-section-icons.left-clear {
@@ -163,7 +189,7 @@ img.form-section-icons.right-clear {
 div#form-data-holder {
   margin-right: auto;
   margin-left: auto;
-  text-align: center;
+
   width: 100%;
 }
 
@@ -190,32 +216,40 @@ label.date-picker-label {
 
 div#google-map-wrapper {
   div#google-map-holder{
-    padding: 24px;
-    margin-right: auto;
-    margin-left: auto;
     overflow: hidden;
     background-color: $map-holder-background;
     color: $white;
-    width: $google-map-width;
-    max-width: $max-map;
-    padding-top: $google-map-width;
+    width: 100%;
+
     height: 100%;
+
     max-height: $max-map;
     overflow: hidden;
+    position: absolute;
+
   }
-    max-height: $max-map;
-    overflow: hidden;
+    height: 55%;
+    position: relative;
+    #google-map-cover {
+      background-color: $map-holder-background;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
 }
 
+#google-map-wrapper  {
+  position: relative;
+}
 
 
 
 /*UTILITIES*/
 .removed_item {
   /*transition: 2s myChange;*/
-  animation-name: example;
-  animation-duration: .5s;
-
+  // animation-name: example;
+  // animation-duration: .5s;
+  display: none;
 
 }
 .added_item {

@@ -6,11 +6,12 @@
     .container input {
         width: 100%;
         clear: both;
-        font-family: "sans-serif";
+        font-family: "Helvetica Neue", Arial, Sans-Serif;
         font-size: 24px;
         margin-bottom: 16px;
         border: 2px solid split($top-bar, s2);
         height:32px;
+
 
         &:focus {
           border: solid split($top-bar, s1) !important;

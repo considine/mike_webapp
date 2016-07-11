@@ -1,0 +1,19 @@
+@mixin vertical-form-height ($height) {
+  //normal scenario
+  // background-color: blue;
+  height: 40%;
+  $height-diff: (600px - $height)/100;
+  #top-form-panel {
+    $panel-margin: 32px - ($height-diff * 8);
+    margin-top: $panel-margin/2;
+    margin-bottom: $panel-margin/2;
+    ul li {
+      font-size: 24px - ($height-diff * 4);
+
+    }
+  }
+  #form-section-wrapper #form-data-holder .container input {
+    height: 36px - ($height-diff * 6);
+
+  }
+}

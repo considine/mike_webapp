@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container" ng-class="container_class">
 	<label style="font-family: sans-serif;" for="address">Address</label>
 	<input id="address" ng-model="addressdata">
 	<label style="font-family: sans-serif;" for="zipcode">Zip Code</label>
-	<input id="zipcode" ng-model="zipdata">
+	<input id="zipcode" ng-model="zipdata" ng-blur="checkZipLength()">
 	<!-- <label style="font-family: sans-serif;" for="city">City</label>
 	<input id="city">
 	<label style="font-family: sans-serif;" for="state">State</label>

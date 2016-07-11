@@ -13,10 +13,10 @@
         Close
       </button>
     </snap-drawer>
-      <snap-content snap-options="opts">
+    <snap-content snap-options="opts">
     <site-header> </site-header>
 
-
+    <div id="main-content-form">
     <div id="top-form-panel-wrapper">
       <div id="top-form-panel">
         <ul id="form-nav" ng-cloak>
@@ -24,24 +24,25 @@
         </ul>
       </div>
     </div>
-    <div id="section-wrapper">
+    <!-- <div id="section-wrapper"> -->
       <!-- <img ng-src="{{currentDisplayImage}}" class="form-section-icons removed_item left-clear" ng-click="animate=!animate" ng-class="{'animate': animate}">  -->
-      <div id="form-section-wrapper">
-        <div  id="form-data-holder">
-            <!-- <img ng-src="{{currentDisplayImage}}" class="form-section-icons removed_item left-clear" ng-click="setMap()"> -->
-         <!-- FORM DATA -->
-         <div ng-hide="true">
-           <new-listing-form-location> </new-listing-form-location>
-           <new-listing-soonest-move> </new-listing-soonest-move>
-        </div>
-        <location-form></location-form>
+    <div id="form-section-wrapper">
+      <div  id="form-data-holder">
+          <!-- <img ng-src="{{currentDisplayImage}}" class="form-section-icons removed_item left-clear" ng-click="setMap()"> -->
+       <!-- FORM DATA -->
+       <div ng-hide="true">
+         <new-listing-form-location> </new-listing-form-location>
+         <new-listing-soonest-move> </new-listing-soonest-move>
+      </div>
+      <location-form></location-form>
 
-        </div> <!--End image wrapper -->
-      </div> <!--End form-secion wrapper -->
-    </div> <!-- End section wrapper-->
-    <div id="google-map-wrapper">
+      </div> <!--End image wrapper -->
+    </div> <!--End form-secion wrapper -->
+    <!-- </div> End section wrapper-->
+  </div> <!-- End main-content form -->
+    <div id="google-map-wrapper" ng-cloak>
       <div id="google-map-holder" ng-cloak></div>
-      <div id="google-map-cover"> </div>
+      <div id="google-map-cover" ng-class="removeCover" ng-cloak> </div>
     </div>
   </snap-content>
   <script src="scripts/vendor.bundle.js"></script>
