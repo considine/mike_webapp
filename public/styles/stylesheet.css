@@ -352,7 +352,7 @@ snap-content {
     font-size: 4px;
   }
   div#main-content-form #form-section-wrapper #form-data-holder .container input {
-    height: 6px;
+    height: -4px;
   }
 }
 @media (min-height: 400px) {
@@ -367,7 +367,7 @@ snap-content {
     font-size: 16px;
   }
   div#main-content-form #form-section-wrapper #form-data-holder .container input {
-    height: 24px;
+    height: 20px;
   }
 }
 @media (min-height: 500px) {
@@ -382,7 +382,7 @@ snap-content {
     font-size: 20px;
   }
   div#main-content-form #form-section-wrapper #form-data-holder .container input {
-    height: 30px;
+    height: 28px;
   }
 }
 @media (min-height: 600px) {
